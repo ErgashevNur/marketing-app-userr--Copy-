@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* --primary: 0 100% 50%;
+    --primary-foreground: 0 100% 50% */
+
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --card: 0 0% 100%;
+    --primary: 180 100% 50%;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    /* --primary-foreground: 222.2 47.4% 11.2%; */
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 0 0% 0%;
+    --accent: 42 95% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 47.4% 11.2%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 10%;
+    --foreground: 0 0% 100%;
+    --card: 220 10% 20%;
+    --card-foreground: 0 0% 100%;
+    --popover: 240 10% 15%;
+    --popover-foreground: 0 0% 100%;
+    /* --primary: 180 100% 50%; */
+    --primary: 180 50% 40%;
+
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 3.7% 20%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 42 95% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 5% 26.1%;
+    --input: 240 5% 26.1%;
+    --ring: 180 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 20s linear infinite;
+}
+
+.spin-wheel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid #888f74;
+  transition: transform 5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.spin-wheel-section {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  transform-origin: bottom right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.spin-wheel-pointer {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 30px solid #888f74;
+  z-index: 10;
+}
+
+.timer-circle {
+  stroke-dasharray: 283;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 1s linear;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d4d7c4;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-dot.active {
+  background-color: #888f74;
+}
+
+.violett {
+  background-color: violet;
+}
+
+.scroll-marquee {
+  display: flex;
+  animation: marquee 5s linear infinite;
+  max-width: 35%;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

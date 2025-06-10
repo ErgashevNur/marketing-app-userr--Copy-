@@ -1,0 +1,172 @@
+{
+  "users": [
+    {
+      "id": "user-1",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password123",
+      "role": "user",
+      "status": "active",
+      "balance": 1500,
+      "createdAt": "2023-01-15T10:30:00Z"
+    },
+    {
+      "id": "user-2",
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "status": "active",
+      "balance": 5000,
+      "createdAt": "2022-12-10T08:15:00Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "product-1",
+      "name": "Natural Face Cream",
+      "description": "Advanced anti-aging formula with natural ingredients",
+      "price": 45,
+      "category": "skincare",
+      "rating": 4.8,
+      "reviews": 124,
+      "images": [
+        "https://picsum.photos/id/21/800/800",
+        "https://picsum.photos/id/22/800/800",
+        "https://picsum.photos/id/23/800/800"
+      ],
+      "features": [
+        "Contains natural ingredients",
+        "Reduces fine lines and wrinkles",
+        "Provides 24-hour hydration"
+      ]
+    },
+    {
+      "id": "product-2",
+      "name": "Vitamin C Serum",
+      "description": "Brightening serum for radiant skin",
+      "price": 35,
+      "category": "skincare",
+      "rating": 4.7,
+      "reviews": 98,
+      "images": [
+        "https://picsum.photos/id/24/800/800",
+        "https://picsum.photos/id/25/800/800",
+        "https://picsum.photos/id/26/800/800"
+      ],
+      "features": [
+        "20% Vitamin C concentration",
+        "Brightens skin tone",
+        "Reduces dark spots"
+      ]
+    },
+    {
+      "id": "product-3",
+      "name": "Collagen Supplement",
+      "description": "Support skin elasticity and joint health",
+      "longDescription": "Our Collagen Supplement is a premium product designed to enhance your overall health and well-being. Packed with Type I and III collagen peptides, this supplement is scientifically formulated to improve skin elasticity, reduce the appearance of wrinkles, and promote a youthful glow. It also supports joint health by strengthening cartilage and reducing discomfort caused by aging or physical activity. Additionally, this supplement contributes to stronger hair and nails, making it a comprehensive solution for your beauty and health needs. The unflavored formula easily dissolves in any beverage, making it convenient to incorporate into your daily routine. Whether you're looking to maintain your youthful appearance or support your active lifestyle, our Collagen Supplement is the perfect choice.",
+      "price": 29,
+      "category": "supplements",
+      "rating": 4.5,
+      "reviews": 76,
+      "images": [
+        "https://picsum.photos/id/27/800/800",
+        "https://picsum.photos/id/28/800/800",
+        "https://picsum.photos/id/29/800/800"
+      ],
+      "features": [
+        "Type I & III collagen peptides",
+        "Supports skin elasticity",
+        "Promotes joint health",
+        "Strengthens hair and nails",
+        "Easily dissolves in beverages",
+        "Unflavored and convenient for daily use"
+      ]
+    }
+  ],
+  "tariffs": [
+    {
+      "id": "tariff-1",
+      "name": "start",
+      "price": 250000,
+      "duration": 120,
+      "dailyProfit": 100,
+      "description": "The Start tariff is designed for beginners who are just stepping into the world of premium skincare and wellness. This plan offers a cost-effective way to experience the benefits of our clinically tested products. With a focus on natural ingredients and fast results, this tariff is perfect for those looking to enhance their daily routine without a significant investment.",
+      "features": ["Natural ingredients", "Clinically tested", "Fast results"],
+      "images": [
+        "https://picsum.photos/id/1/400/300",
+        "https://picsum.photos/id/2/400/300",
+        "https://picsum.photos/id/3/400/300"
+      ]
+    },
+    {
+      "id": "tariff-2",
+      "name": "silver",
+      "price": 350000,
+      "duration": 150,
+      "dailyProfit": 150,
+      "description": "The Silver tariff is tailored for regular users who want to maintain their skincare and wellness routine with advanced features. This plan includes products with anti-aging properties, moisturizing benefits, and UV protection, ensuring a comprehensive approach to skin health. Ideal for those who value quality and consistency in their daily regimen.",
+      "features": ["Anti-aging", "Moisturizing", "UV protection"],
+      "images": [
+        "https://picsum.photos/id/4/400/300",
+        "https://picsum.photos/id/5/400/300",
+        "https://picsum.photos/id/6/400/300"
+      ]
+    },
+    {
+      "id": "tariff-3",
+      "name": "gold",
+      "price": 450000,
+      "duration": 180,
+      "dailyProfit": 200,
+      "description": "The Gold tariff is our premium plan, crafted for professionals and enthusiasts who demand the best in skincare and wellness. This plan offers full-body treatment solutions, deep moisturizing, and skin-tightening benefits. With a focus on luxury and effectiveness, the Gold tariff is perfect for those who want to achieve visible and lasting results.",
+      "features": [
+        "Full body treatment",
+        "Deep moisturizing",
+        "Skin tightening"
+      ],
+      "images": [
+        "https://picsum.photos/id/7/400/300",
+        "https://picsum.photos/id/8/400/300",
+        "https://picsum.photos/id/9/400/300"
+      ]
+    }
+  ],
+  "payments": [
+    {
+      "id": "payment-1",
+      "userId": "user-1",
+      "tariffId": "tariff-2",
+      "amount": 350000,
+      "status": "approved",
+      "cardDetails": {
+        "number": "4242 4242 4242 4242",
+        "holderName": "John Smith",
+        "bank": "Example Bank"
+      },
+      "receiptUrl": "https://example.com/receipts/receipt-1.jpg",
+      "createdAt": "2023-05-10T14:30:00Z",
+      "updatedAt": "2023-05-10T15:00:00Z"
+    },
+    {
+      "id": "payment-2",
+      "userId": "user-1",
+      "tariffId": "tariff-1",
+      "amount": 250000,
+      "status": "pending_approval",
+      "cardDetails": {
+        "number": "5555 5555 5555 4444",
+        "holderName": "Jane Doe",
+        "bank": "Test Bank"
+      },
+      "receiptUrl": "https://example.com/receipts/receipt-2.jpg",
+      "createdAt": "2023-05-15T10:15:00Z",
+      "updatedAt": "2023-05-15T10:30:00Z"
+    }
+  ],
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true
+  },
+  "importStatement": "import mockData from \"../data/mock.json\";"
+}
