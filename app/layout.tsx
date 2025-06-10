@@ -17,7 +17,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "MLM Platform",
-  description: "Modern MLM Platform for cosmetics and health products",
+  description: "Modern MLM Platform for cosmetics and health products.",
   icons: [
     { rel: "icon", url: "/favicon.ico" },
     { rel: "apple-touch-icon", sizes: "180x180", url: "/apple-touch-icon.png" },
