@@ -18,6 +18,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "MLM Platform",
   description: "Modern MLM Platform for cosmetics and health products",
+  icons: {
+    icon: "/favicon.ico", // yoki .png/.svg bo‘lishi mumkin
+  },
 };
 
 export default function RootLayout({
