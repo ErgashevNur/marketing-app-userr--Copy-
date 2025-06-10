@@ -18,16 +18,12 @@ const handler = NextAuth({
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
       console.log(user, account, profile, email, credentials, "20qator");
-
       console.log("User signed in:", user);
       return true;
     },
-    async signOut({ token }) {
-      console.log("User signed out:", token);
-    },
-    async error({ error }) {
-      console.error("NextAuth Error:", error);
-    },
+    // signOut callback is not a valid NextAuth callback and will be ignored.
+    // error callback should be named 'onError' for NextAuth v4+.
+    // Remove or fix these if you want to use custom error handling.
   },
 });
 
